@@ -1,20 +1,19 @@
-import logo from "./logo.svg";
-import "./App.css";
-import Login from "./pages/Login";
-import Dashboard from "./pages/Dashboard";
-import { Routes, Route } from "react-router-dom";
-import { useState, useEffect } from "react";
-import { auth } from "./firebase";
+import React from "react";
+import { Routes, Route, Link } from "react-router-dom";
+import Login from "./pages/Login"
+import Dashboard from "./pages/Dashboard"
+import './App.css'
 
-function App() {
+
+const App = () => {
   return (
     <div className="App">
-      <Routes>
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/login" element={<Login />} />
-      </Routes>
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="dashboard" element={<Dashboard />} />
+    </Routes>
     </div>
   );
-}
+};
 
 export default App;
